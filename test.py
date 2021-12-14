@@ -4,11 +4,7 @@ the_records = [1, 2, 3, 4, 5, 6, 7]
 artist = ['moodymann', 'sheila e', 'awesome dre','james black', 'amajika', 'can', 'anthony shakir', 'mark stewart', 'ron hardy', 'fred wesley', 'model 500', 'neneh cherry', 'fela kuti']
 genres = ['beatdown house', 'hip hop','no wave new york punk disco.', 'afro funk.', 'avantegarde.', 'detroit techno.', '80s industrial.', 'chicago house.',
           '70s jazz funk', 'freestyle\n']
-
-
-
-
-
+song_list = ([1], "song library/01 Controversy.mp3",[2] ,"song library/1-02 Everything's Gone Green.mp3",[3] ,"song library/01 Buffalo Stance.mp3", [4], "song library/05 Slow Down.mp3", [5], "song library/01 The Glamorous Life (8 Minute Version).mp3")
 
 
 for genre in genres:
@@ -80,6 +76,7 @@ class Record5(Artist):
       self.name = "Fela Kuti"
       self.title = "Upside Down"
       self.description = "Essential afrobeat loft classic from fela kuti & africa 70, released in 1976"
+
 class Record:
   def __init__(self, artist, title, genre, year, label):
     self.artist = artist
@@ -126,7 +123,7 @@ fela_kuti.show()
 
 
 
-
+#gets called when an attribute is accessed
 def filterByGenre():
   print('\nAlbums by genre:')
   for albumGenre in genres:
@@ -212,7 +209,8 @@ class Mixtape:
         im =Image.open(r"/Users/apple1/Desktop/dre.jpg")
         im.show()
         from playsound import playsound
-        playsound("./song library/You Can't Hold Me Back/08 committing rhymes.mp3")
+        playsound("./song library/08 committing rhymes.mp3")
+
       elif self.choice == "d":
         self.artist = Record4()
         from PIL import Image
@@ -221,18 +219,5 @@ class Mixtape:
         from playsound import playsound
         playsound("./song library/01 Buffalo Stance.mp3")
 
-
 new_mix = Mixtape()
 new_mix.start()
-
-#def playsound():
-
-  #  currentsong = playsound("/Users/apple1/Music/iTunes/iTunes Media/Music/Awesome Dre & The Hardcore Commitee/You Can't Hold Me Back/08 committing rhymes.mp3")
-   # print(currentsong)
-#playsound()
-
-#from pydub import AudioSegment
-#song = AudioSegment.from_mp3("/Users/apple1/Music/iTunes/iTunes Media/Music/Awesome Dre & The Hardcore Commitee/You Can't Hold Me Back/08 committing rhymes.mp3")
-
-#pygame.mixer.music.load("/Users/apple1/Music/iTunes/iTunes Media/Music/Awesome Dre & The Hardcore Commitee/You Can't Hold Me Back/08 committing rhymes.mp3")
-#pygame.mixer.music.play(-1)
