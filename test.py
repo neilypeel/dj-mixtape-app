@@ -1,10 +1,12 @@
 print('\n\nhello, here is a list of genres from playlist to choose\n\n')
 
-the_records = [1, 2, 3, 4, 5, 6, 7]
-artist = ['moodymann', 'sheila e', 'awesome dre','james black', 'amajika', 'can', 'anthony shakir', 'mark stewart', 'ron hardy', 'fred wesley', 'model 500', 'neneh cherry', 'fela kuti']
-genres = ['beatdown house', 'hip hop','no wave new york punk disco.', 'afro funk.', 'avantegarde.', 'detroit techno.', '80s industrial.', 'chicago house.',
+
+artist = ['moodymann', 'sheila e', 'awesome dre','ESG', 'amajika', 'can', 'inner city', 'new order', 'ron hardy', 'fred wesley', 'model 500', 'neneh cherry', 'fela kuti']
+genres = ['beatdown house', 'hip hop','no wave new york punk disco.', 'afro funk.', 'avantegarde.', 'detroit techno.', '80s new wave electro.', 'chicago house.',
           '70s jazz funk', 'freestyle\n']
-song_list = ([1], "song library/01 Controversy.mp3",[2] ,"song library/1-02 Everything's Gone Green.mp3",[3] ,"song library/01 Buffalo Stance.mp3", [4], "song library/05 Slow Down.mp3", [5], "song library/01 The Glamorous Life (8 Minute Version).mp3")
+song_list = ("song library/01 Controversy.mp3", "song library/1-02 Everything's Gone Green.mp3", "song library/02 Buggin' Out.mp3", "song library/05 Slow Down.mp3", "song library/sensation.mp3")
+
+
 
 
 for genre in genres:
@@ -45,9 +47,9 @@ class Artist:
 
 class Record1(Artist):
     def __init__(self):
-      self.name = "Moodymann"
-      self.title = "Taken Away"
-      self.description = "It is a double lp of on fire detroit funk by Mr Kenny Dixon Jnr, but with an added bonus lp of a previous mp3 only release mini album."
+      self.name = "Inner City"
+      self.title = "Big Fun"
+      self.description = "Cool choice to start the party! A classic detroit techno burner!."
 
 
 
@@ -71,11 +73,7 @@ class Record4(Artist):
       self.title = "Buffalo Stance"
       self.description = "1980s freestyle chart hit"
 
-class Record5(Artist):
-    def __init__(self):
-      self.name = "Fela Kuti"
-      self.title = "Upside Down"
-      self.description = "Essential afrobeat loft classic from fela kuti & africa 70, released in 1976"
+
 
 class Record:
   def __init__(self, artist, title, genre, year, label):
@@ -91,27 +89,27 @@ class Record:
 moodymann = Record('moodymann.', 'taken away.', 'beatdown house.', '2020.', 'kdj.\n')
 sheila_e = Record('sheila e.', 'glamorous life.', 'freestyle.', '1984.', 'warner.\n')
 awesome_dre =Record('awesome dre.', 'you cant hold me down.', 'hip hop.', '1989.', 'bentley.\n' )
-james_black = Record('james black.', 'contort yourself.', 'no wave new york punk disco.', '1980.', 'Z.\n')
+esg = Record('ESG.', 'moody.', 'no wave new york punk disco.', '1980.', '99.\n')
 amajika = Record('amajika.', 'got my magic working.', 'afro funk.', '1982.', 'la casa tropical.\n')
-can = Record('can.', 'tago mago.', '70s prog rock.', '1971.', 'united artists.\n')
-anthony_shakir = Record('shake.', 'songs for my mother.', 'detroit techno.', '2000.', 'frictional.\n')
-mark_stewart = Record('mark stewart.', 'as the veneer of democracy begins to fade.', 'industrial, 80s.', '1984.', 'mute.\n')
+can = Record('can.', 'im so green.', '70s prog rock.', '1972.', 'united artists.\n')
+inner_city = Record('inner city.', 'big fun.', 'detroit techno.', '1988.', 'kms.\n')
+new_order = Record('new order.', 'everythings gone green.', '80s new wave electro.', '1981.', 'factory.\n')
 ron_hardy = Record('ron hardy.', 'sensation.', 'chicago house.', '1985.', 'trax.\n')
 fred_wesley = Record('fred wesley.', 'damn right i am somebody.', '70s jazz funk.', '1973.', 'people.\n')
 model_500 = Record('model 500.', 'no ufos.', 'detroit techno.', '1986.', 'metroplex.\n')
 neneh_cherry = Record('neneh cherry', 'buffalo stance', 'freestyle', '1988', 'circa\n' )
 fela_kuti = Record('fela kuti', 'upside down','afro funk', '1976', 'afrodisia\n')
-records = [moodymann, sheila_e, james_black, amajika, can, anthony_shakir, mark_stewart, ron_hardy, fred_wesley, model_500]
+records = [moodymann, sheila_e, esg, amajika, can, inner_city, new_order, ron_hardy, fred_wesley, model_500]
 
 
 
 moodymann.show()
 sheila_e.show()
-james_black.show()
+esg.show()
 amajika.show()
 can.show()
-anthony_shakir.show()
-mark_stewart.show()
+inner_city.show()
+new_order.show()
 ron_hardy.show()
 fred_wesley.show()
 model_500.show()
@@ -146,7 +144,7 @@ class Mixtape:
       introduction_text(name)
 
       self.choice = input(
-        "So first, what record should we start the mix with? a. Moodymann, b. Sheila E, c. Awesome Dre, d.Neneh Cherry\n"
+        "So first, what record should we start the mix with? a. Inner City, b. Sheila E, c. Awesome Dre, d.Neneh Cherry\n"
       )
 
       if self.choice == "a":
@@ -166,7 +164,7 @@ class Mixtape:
 
 
       else:
-        print("You have not selected a valid option!")
+        print("Track choice not specified!")
         exit()
 
       self.genre = Genre(name, self.artist)
@@ -188,10 +186,10 @@ class Mixtape:
       if self.choice == "a":
           self.artist = Record1()
           from PIL import Image
-          im = Image.open(r"/Users/apple1/Desktop/taken_away.jpg")
+          im = Image.open(r"/Users/apple1/Desktop/bigfun.jpg")
           im.show()
           from playsound import playsound
-          playsound("./song library/05 Slow Down.mp3")
+          playsound("song library/05 Big Fun.mp3")
 
 
 
@@ -221,3 +219,31 @@ class Mixtape:
 
 new_mix = Mixtape()
 new_mix.start()
+
+from playsound import playsound
+from PIL import Image
+
+artist = ['moodymann', 'sheila e', 'awesome dre','ESG', 'amajika', 'can', 'inner city', 'new order', 'ron hardy', 'fred wesley', 'model 500', 'neneh cherry', 'fela kuti']
+genres = ['beatdown house', 'hip hop','no wave new york punk disco.', 'afro funk.', 'avantegarde.', 'detroit techno.', '80s new wave electro.', 'chicago house.',
+          '70s jazz funk', 'freestyle\n']
+song_list = ("song library/01 Controversy.mp3", "song library/1-02 Everything's Gone Green.mp3", "song library/no UFOs.mp3", "song library/01 Upside Down.mp3", "song library/02 Blow Your Head.mp3")
+art_list = ("/Users/apple1/Desktop/controversy.jpg", "/Users/apple1/Desktop/new order.jpg", "/Users/apple1/Desktop/noufos.jpg", "/Users/apple1/Desktop/upsidedown.jpg", "/Users/apple1/Desktop/fredwesley.jpg")
+while True:
+    choice = input("ok dj!! so lets now choose more songs from the list.. press numbers 0 - 4 to select\n\n")
+    index= int(choice)
+    print(song_list[index])
+    im = Image.open(art_list[index])
+    im.show()
+    playsound(song_list[index])
+
+
+
+
+
+
+
+
+
+
+
+
